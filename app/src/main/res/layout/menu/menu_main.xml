@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://www.w3.org/1999/xhtml" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent" tools:context=".MainActivity">
+
+
+    <item android:id="@+id/map_types"
+        android:orderInCategory="80"
+        android:icon="@mipmap/set_arrow"
+        android:title="Innstillinger"
+        app:showAsAction="always" >
+        <menu>
+
+            <item
+                android:id="@+id/login"
+                android:title="Login"/>
+            <item
+                android:id="@+id/ins"
+                android:title="Instillinger"/>
+            <item
+                android:id="@+id/hjelp"
+                android:title="Hjelp"/>
+            <item
+                android:id="@+id/avslutt"
+                android:title="Avslutt"/>
+        </menu>
+    </item>
+
+
 
 </menu>
