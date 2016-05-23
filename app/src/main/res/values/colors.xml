@@ -3,4 +3,16 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- login color -->
+    <color name="btn_login">#66d97f</color>
+    <color name="btn_register">#6ec8ef</color>
+    <color name="input_login">#222222</color>
+    <color name="lbl_name">#333333</color>
+    <color name="white">#ffffff</color>
+    <color name="bar">#57d2ca</color>
+
+
+
+
 </resources>

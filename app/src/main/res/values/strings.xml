@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Roombooking</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- login -->
+    <string name="login_info">vennligst logg inn for å booke grupperom</string>
+    <string name="Epost">E-post</string>
+    <string name="Brukernavn">Brukernavn</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
+
+
+
+
 </resources>
