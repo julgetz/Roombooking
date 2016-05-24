@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         android.support.v7.app.ActionBar ab = getSupportActionBar();
-        ab.setLogo(R.mipmap.uit_logo);
+        ab.setLogo(R.mipmap.logo);
         ab.setDisplayShowHomeEnabled(true);
         ab.setDisplayUseLogoEnabled(true);
 
