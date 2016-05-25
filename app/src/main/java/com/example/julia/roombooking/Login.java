@@ -9,7 +9,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.gson.Gson;
+
 public class Login extends ActionBarActivity implements View.OnClickListener {
+
+    private Gson gson;
 
     EditText brukernavn;
     EditText epost;
@@ -18,11 +22,11 @@ public class Login extends ActionBarActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.login_bruker);
 
-        brukernavn = (EditText)findViewById(R.id.et_brukernavn);
-        epost = (EditText)findViewById(R.id.et_epost);
-        passord = (EditText)findViewById(R.id.et_passord);
+       // brukernavn = (EditText)findViewById(R.id.et_brukernavn);
+        //epost = (EditText)findViewById(R.id.et_epost);
+        //passord = (EditText)findViewById(R.id.et_passord);
     }
 
     @Override
@@ -39,17 +43,17 @@ public class Login extends ActionBarActivity implements View.OnClickListener {
 
     public View OnCreatView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 
-      View view = inflater.inflate(R.layout.login, container, false);
+      View view = inflater.inflate(R.layout.login_bruker, container, false);
 
-      Button btnLogin = (Button) view.findViewById(R.id.btn_login);
+      Button btnLogin = (Button) view.findViewById(R.id.btnLogin);
       btnLogin.setOnClickListener(this);
-      Button btnRegisterNewUser = (Button) view.findViewById(R.id.btn_registert);
+      Button btnRegisterNewUser = (Button) view.findViewById(R.id.btnreg);
       btnRegisterNewUser.setOnClickListener(this);
 
 
 
-     brukernavn = (EditText)view.findViewById(R.id.et_brukernavn);
-      passord= (EditText)view.findViewById(R.id.et_passord);
+        // brukernavn = (EditText)view.findViewById(R.id.);
+      //passord= (EditText)view.findViewById(R.id.et_passord);
 
       return view;
   }
@@ -60,12 +64,12 @@ public class Login extends ActionBarActivity implements View.OnClickListener {
 
         switch (v.getId()){
 
-            case R.id.btn_login:
+            case R.id.btnLogin:
                 //loginadmin();
                 // lag metode
                 break;
 
-            case R.id.btn_registert:
+            case R.id.btnreg:
 
                 break;
 
