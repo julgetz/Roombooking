@@ -1,11 +1,14 @@
 package com.example.julia.roombooking;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.login:
+                Intent loginIntent = new Intent(this, LoginActivity.class);
+                startActivity(loginIntent);
 
                 break;
             case R.id.ins:
@@ -40,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.hjelp:
                 break;
             case R.id.avslutt:
+                break;
+            case R.id.book_rom:
+                Intent romBookingIntent = new Intent(this, RomBookingActivity.class);
+                startActivity(romBookingIntent);
                 break;
         }
         return super.onOptionsItemSelected(item);
