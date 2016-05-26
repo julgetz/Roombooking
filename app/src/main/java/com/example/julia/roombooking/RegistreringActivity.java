@@ -6,8 +6,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.concurrent.Executor;
+
 public class RegistreringActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public static Executor httpClient;
     private String bruker_type_id = "";
 
     private String bruker_kode;
