@@ -40,7 +40,7 @@
                 android:title="Book rom send bekreftelse" />
             <item
                 android:id="@+id/book_rom_dine_reservasjoner"
-                android:title="dine reservasjoner" />
+                android:title="dine reservasjonerrr" />
         </menu>
     </item>
 
