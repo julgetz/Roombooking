@@ -37,7 +37,7 @@
                 android:title="Book Rom Kvittering" />
             <item
                 android:id="@+id/book_rom_send_bekreftelse"
-                android:title="Book rom send bekreftelse" />
+                android:title="Book rom send bekreftelse " />
             <item
                 android:id="@+id/book_rom_dine_reservasjoner"
                 android:title="dine reservasjonerrr" />
