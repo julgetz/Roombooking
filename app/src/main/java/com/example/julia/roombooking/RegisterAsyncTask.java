@@ -3,56 +3,58 @@ package com.example.julia.roombooking;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Pair;
 
-import java.io.BufferedReader;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.util.EntityUtils;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.util.List;
 
 
-public class RegisterAsyncTask extends AsyncTask<URL, Void , String> {
+public class RegisterAsyncTask extends AsyncTask<Pair<List<NameValuePair>, HttpClient>, Void, String> {
 
     private  String UrlRegiserUSer = "https://android-rombooking-mbruksaas.c9users.io/registerUser.php.";
     private Context context = null;
     private ProgressDialog progressDialog;
-
-
-
-
-
+    public static HttpClient httpClient;
 
     public RegisterAsyncTask(Context context){
-        this.context = context;
-    }
-
-
-
+        this.context = context;}
 
 
     @Override
-    protected String doInBackground(URL... params) {
+    protected String doInBackground(Pair<List<NameValuePair>, HttpClient>... params) {
 
-        UrlRegiserUSer += params[0];
+        Pair pair = params[0];
+        List<NameValuePair> urlParams = (List<NameValuePair>)pair.first;
 
-         URL regUrl;
-        String stringText = "";
+        try {
+            // url to the server method we are going to use
 
-        try{
+            HttpPost httpPost = new HttpPost(UrlRegiserUSer);
+            httpPost.setEntity(new UrlEncodedFormEntity(urlParams));
+            HttpResponse response = httpClient.execute(httpPost);
 
-            regUrl = new URL(UrlRegiserUSer);
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(regUrl.openStream()));
-            String StringBuffer;
-
-
-
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+            if (response.getStatusLine().getStatusCode() == 200)
+            {
+                return EntityUtils.toString(response.getEntity());
+            }
+            return response.getStatusLine().getStatusCode() + " " + response.getStatusLine().getReasonPhrase();
         }
-
-
-        return stringText;
+        catch (ClientProtocolException e)
+        {
+            return e.getMessage();
+        }
+        catch (IOException e)
+        {
+            return e.getMessage();
+        }
     }
+
 }
