@@ -13,7 +13,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Button btnReg = (Button)findViewById(R.id.btnreg);
+        Button btnReg = (Button) findViewById(R.id.bt_login_reg);
 
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,25 +24,26 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
+        Button bt_login = (Button) findViewById(R.id.bt_login);
+
+        bt_login.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+
+                Intent loginIntent = new Intent(getApplicationContext(), RomBookingActivity.class);
+                startActivity(loginIntent);
+            }
+        });
+
+    }
+
+        public void lolol(){
+
+
+
     }
 
 
-/*
-    @Override
-    public void onClick(View v) {
-
-        switch (v.getId()){
-
-            case R.id.btnLogin:
-
-                break;
-
-            case R.id.btnreg:
-
-                break;
-
-        }
-
     }
-    */
-}

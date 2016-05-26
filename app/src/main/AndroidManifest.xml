@@ -29,11 +29,13 @@
             android:name=".RomBookingActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".RegistreringActivity" />
-        <activity
-            android:name=".RomBookingActivity"
-            android:theme="@style/AppTheme" />
+
         <activity android:name="." />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RomBookingReserverActivity" />
+        <activity android:name=".RomBookingKvitteringActivity" />
+        <activity android:name=".RomBookingSendBekretelseActivity" />
+        <activity android:name=".RomBookingDineReservasjonerActivity"></activity>
     </application>
 
 </manifest>

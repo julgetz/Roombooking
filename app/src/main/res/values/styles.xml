@@ -13,7 +13,9 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:gravity">center</item>
 
+    </style>
 
+    <style name="dialogtheme" patent="Theme.AppCompat.Light.Dialog">
 
     </style>
 

@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.login:
                 Intent loginIntent = new Intent(this, LoginActivity.class);
                 startActivity(loginIntent);
-
                 break;
             case R.id.ins:
                 break;
@@ -50,6 +49,24 @@ public class MainActivity extends AppCompatActivity {
                 Intent romBookingIntent = new Intent(this, RomBookingActivity.class);
                 startActivity(romBookingIntent);
                 break;
+            case R.id.book_rom_res:
+                Intent reserverIntent = new Intent(this,RomBookingReserverActivity.class);
+                startActivity(reserverIntent);
+                break;
+            case R.id.book_rom_send_bekreftelse:
+                Intent bekreftIntent = new Intent(this,RomBookingSendBekretelseActivity.class);
+                startActivity(bekreftIntent);
+                break;
+            case R.id.book_rom_kvittering:
+                Intent kvitteringIntent = new Intent(this,RomBookingKvitteringActivity.class);
+                startActivity(kvitteringIntent);
+                break;
+
+            case R.id.book_rom_dine_reservasjoner:
+                Intent dineReservasjonerIntent = new Intent(this,RomBookingDineReservasjonerActivity.class);
+                startActivity(dineReservasjonerIntent);
+                break;
+
         }
         return super.onOptionsItemSelected(item);
     }
