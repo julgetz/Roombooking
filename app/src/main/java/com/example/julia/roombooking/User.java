@@ -22,7 +22,8 @@ public class User {
     private String ll;
 
 
-
+    public User() {
+    }
 
     public User(String bruker_kode, String fornavn, String etternavn, String epost, String passord, String random, int vertifiser, Timestamp opprettet) {
         this.bruker_kode = bruker_kode;
