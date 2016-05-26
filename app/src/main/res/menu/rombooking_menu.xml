@@ -19,7 +19,7 @@
                 android:title="Hjelp"/>
             <item
                 android:id="@+id/avslutt"
-                android:title="Avslutt"/>
+                android:title="Avslutt" />
 
 
         </menu>
